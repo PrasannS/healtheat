@@ -64,37 +64,78 @@ class _HomePageState extends State<HomePage> {
     ),
   );
 
+  String imageVal =
+      "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Findianapublicmedia.org%2Fstateimpact%2Ffiles%2F2013%2F01%2Fapple-image.jpg&f=1&nofb=1";
   String src = "Hello";
 
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle.dark.copyWith(statusBarColor: Colors.grey[800]));
-    var imageVal =
-        "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Findianapublicmedia.org%2Fstateimpact%2Ffiles%2F2013%2F01%2Fapple-image.jpg&f=1&nofb=1";
     return Scaffold(
-      appBar: searchBar, //Search Bar
-      backgroundColor: Colors.grey[600], //Main Background Color
-      body: Container(
-        //Horizontal Scroll
-        margin: EdgeInsets.symmetric(vertical: 20.0),
-        height: 300,
-        child: ListView(
-          scrollDirection: Axis.horizontal,
-          children: <Widget>[
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
-            MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2")
+        appBar: searchBar, //Search Bar
+        backgroundColor: Colors.grey[600], //Main Background Color
+        body: Column(
+          children: [
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20.0),
+              height: 300,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2")
+                ],
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(vertical: 20.0),
+              height: 300,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                children: <Widget>[
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2"),
+                  MyRecipes(imageVal, "Heading", "Subheading1", "Subheading2")
+                ],
+              ),
+            ),
           ],
-        ),
-      ),
-    );
+        ));
   }
 
   Container MyRecipes(
