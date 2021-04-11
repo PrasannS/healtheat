@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
+import 'package:healtheat/api/api_interface.dart';
 import 'package:healtheat/constants/restaurants.dart';
+import 'package:healtheat/items_page.dart';
 import 'package:searchable_dropdown/searchable_dropdown.dart';
 
 class HomePage extends StatefulWidget {
@@ -33,6 +35,13 @@ class _HomePageState extends State<HomePage> {
             child: GestureDetector(
               onTap: () {
                 print(r["url"]);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => ItemsPage(
+                            url: r['url'],
+                          )),
+                );
               },
               child: Container(
                 child: Text(r['name']),
