@@ -23,9 +23,12 @@ from flask import Flask, render_template, request, jsonify
 from bs4 import BeautifulSoup
 import urllib
 import re 
+from flask_cors import CORS, cross_origin
 
 # [START create_app]
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 # [END create_app]
 # 
 def getsoup (address):
@@ -65,12 +68,14 @@ def getmenu(addr):
     return menu
 
 @app.route('/get_menu_data', methods=['GET'])
+@cross_origin()
 def get_menu_data():
     args = request.args
     url = args['url']
     menudata = {}
     
-    menudata['items'] = getmenu()
+    menudata['items'] = getmenu(url)
+    print(menudata)
     
     
     return menudata
